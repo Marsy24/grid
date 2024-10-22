@@ -1,0 +1,14 @@
+server {
+    listen 80;
+    server_name wwave.marsy.online;
+
+    root /var/www/wwave.marsy.online;
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    error_log /var/log/nginx/wwave.marsy.online.error.log;
+    access_log /var/log/nginx/wwave.marsy.online.access.log;
+}
